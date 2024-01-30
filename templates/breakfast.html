@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main_content %} 
+    <h1>Our meal Catalog</h1> 
+    <table>  
+        {% for item in meals %} 
+            <tr>
+                <td>{{ item ["name"] }}</td> 
+                <td>{{ item["price"] }}</td> 
+                <td><a href="{{ url_for('meal', meal_id=meal ['meal_id'] ) }}">See details</a></td> 
+            </tr> 
+        {% endfor %}  
+    </table>  
+{% endblock %}

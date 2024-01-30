@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+{% block main_content %}  
+    <h1>Your cart</h1> 
+    {% if cart %}  
+        <table>
+        {% for meal_id in cart %} 
+            <tr>  
+                <td>{{ names [meal_id] }}</td> 
+                <td>{{ cart [meal_id] }}</td>
+            </tr> {% endfor %}   
+        </table>
+    {% else %} 
+        <p>Your cart is empty!</p> 
+    {% endif %} 
+ {% endblock %}

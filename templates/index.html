@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main_content %}
+<h1>Welcome to our main page</h1>
+    <section>
+        <h3>"iam allergic to" servay</h3>
+        <p>let us know what type of food you are alergic to so we dont have to pop it up on your screen </p>
+        <p> <a href="{{ url_for('allergy') }}">click here to fill the survey </a></p>
+    </section>
+
+
+{% endblock %}

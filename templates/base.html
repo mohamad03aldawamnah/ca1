@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "utf-8"/>
+    <title> Mohamed Restaurant</title>
+    <link rel="stylesheet" href="static/ca.css"/>
+    <link rel="icon" href="static/logo.png"/>
+</head>
+<body>
+    <header>
+        <img src="static\logo.png.png" alt="" width="150" height="100">
+        <p>Mohamed resturant</p>
+        {% if g.user %}
+        <section>
+            <a id = "ma" href="{{url_for('index')}}"> Home page </a><br><br>
+            <a id = "ca" href="{{ url_for('cart') }}">cart</a><br><br>
+            <a id = "lo" href="{{ url_for('logout') }}">logout</a><br><br>
+        </section>
+
+        {% else %}
+        <section>
+            <a id = "hp" href="{{ url_for('index') }}"> Home page </a>
+            <a  id = "li" href="{{ url_for('login') }}">login</a>
+            <a id = "reg" href="{{ url_for('register') }}">Register</a>
+        </section>
+        {% endif %}
+    </header>
+    {% block main_content %}
+    {% endblock %}
+
+
+</body>
+</html>
+

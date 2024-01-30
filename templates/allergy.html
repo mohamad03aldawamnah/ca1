@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<h1>allergy survey</h1>
+<p> if you are alergic  to any food  please fill this survey so we know what to display to you and what to not</p>
+    
+<form action="" method = "POST" novalidate>
+    <section id= "al">
+    <h3 id="A">ALLERGY</h3>
+    {{form.hidden_tag()}}
+    {{form.nuts.label}}
+    {{form.nuts()}}
+ 
+    {{form.dairy.label}}
+    {{form.dairy()}}
+  
+    <br />
+    
+    {{form.soy.label}}
+    {{form.soy()}}
+   
+
+    {{form.eggs.label}}
+    {{form.eggs()}}
+  
+    <br/>
+    {{form.wheat.label}}
+    {{form.wheat()}}
+   
+    {{form.fish.label}}
+    {{form.fish()}}
+
+    {{form.chicken.label}}
+    {{form.chicken}}
+
+    
+    {{form.submit()}}
+{% endblock %}
